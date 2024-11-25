@@ -37,7 +37,7 @@
 
 <!-- navbar starts -->
 <header>
-        <a href="/" class="logo"><i class="fab fa-node-js"></i> Jigar</a>
+        <a href="/" class="logo"><i class="fab fa-node-js"></i> ESHA</a>
 
         <div id="menu" class="fas fa-bars"></div>
         <nav class="navbar">
@@ -153,7 +153,7 @@
         </div>
         
         <div class="resumebtn">
-            <a href="https://drive.google.com/file/d/1rZiXl562q7aVyk1kJ2nO85YBAq8ixTiw/view" target="_blank" class="btn"><span>Resume</span>
+            <a href="https://drive.google.com/file/d/1kJLkzHSJ8RSzFv1cPUY6b8bvW7zlWrKn/view?usp=sharing" target="_blank" class="btn"><span>Resume</span>
                 <i class="fas fa-chevron-right"></i>
             </a>
         </div>
@@ -225,23 +225,25 @@
 
   <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
 
+  </head>
+
   <!DOCTYPE html>
   <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Projects</title>
+    <title>Projects</title>
     <style>
-      /* Inline CSS for Video Gallery */
-      .video-gallery {
+      /* Container for Projects */
+      .project-gallery {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
         padding: 20px;
       }
   
-      .video-item {
-        position: relative;
+      /* Individual Project Box */
+      .project-box {
         background-color: #f3f3f3;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -249,15 +251,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+        cursor: pointer;
       }
   
-      .video-item video {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
+      /* Styling the Icon */
+      .project-box i {
+        font-size: 50px;
+        color: rgb(24, 2, 63); /* Yellow color */
       }
   
-      .video-item p {
+      .project-box p {
         position: absolute;
         bottom: 10px;
         left: 10px;
@@ -268,117 +272,87 @@
         border-radius: 5px;
       }
   
-      .video-item iframe {
+      /* Styling for links to open projects */
+      .project-box a {
+        text-decoration: none;
+        color: inherit;
         width: 100%;
         height: 100%;
-        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
-  
-      .video-close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        color: white;
-        font-size: 20px;
-        cursor: pointer;
-        background: rgba(0, 0, 0, 0.5);
-        padding: 5px;
-        border-radius: 50%;
-      }
-  
     </style>
   </head>
   <body>
-    <script>
-      // Function to play the video when clicked
-      function playVideo(index) {
-        var video = document.getElementById('video' + (index + 1));
-        
-        // Hide all other videos
-        var allVideos = document.querySelectorAll('video');
-        allVideos.forEach(function(v) {
-          if (v !== video) {
-            v.pause();  // Pause other videos
-            v.currentTime = 0;  // Reset video to start
-            v.style.display = 'none';  // Hide video
-          }
-        });
   
-        // Play the selected video
-        if (video.paused) {
-          video.style.display = 'block'; // Show the video
-          video.play();
-        } else {
-          video.pause(); // Pause the video
-          video.currentTime = 0; // Reset video to start
-          video.style.display = 'none'; // Hide video
-        }
-      }
-    </script>
-    <!-- Video Gallery Section -->
-    <div class="video-gallery">
-      <!-- Video 1 -->
-      <div class="video-item">
-        <video autoplay muted loop>
-        <video controls>
-          <source src="./Portfolio-Website-main\assets\images\projects\Dubai Real Estate 2.mp4" type="video/mp4">
-          .
-        </video>
-        <p>Dubai,Real Estate Website</p>
+    <!-- Project Gallery Section -->
+    <div class="project-gallery">
+      <!-- Project 1 -->
+      <div class="project-box">
+        <a href="https://shop.askautomart.store/" target="_blank">
+          <i class="fas fa-cart-plus"></i>
+          <p>Car Ecommerce Store</p>
+        </a>
       </div>
   
-      <!-- Video 2 -->
-      <div class="video-item">
-        <video controls>
-          <source src=".\Portfolio-Website-main\Portfolio-Website-main\assets\images\projects\Dubai Violet 4.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p>Dubai Violet 4,Real Estate Website</p>
+      <!-- Project 2 -->
+      <div class="project-box">
+        <a href="https://hirelocal.co.nz/" target="_blank">
+          <i class="fas fa-briefcase"></i>
+          <p>Job Posting Website</p>
+        </a>
       </div>
   
-      <!-- Video 3 -->
-      <div class="video-item">
-        <video controls>
-          <source src=".\Portfolio-Website-main\assets\images\projects\ecom.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p>Ecommerce Car store</p>
+      <!-- Project 3 -->
+      <div class="project-box">
+        <a href="https://wallafan.com/" target="_blank">
+          <i class="fas fa-users"></i>
+          <p>Freelancing+Social Website</p>
+        </a>
       </div>
   
-      <!-- Video 4 -->
-      <div class="video-item">
-        <video controls>
-          <source src=".\Portfolio-Website-main\assets\images\projects\Uk Matrimonial Website.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p>Pak-Uk Matrimonial Website</p>
+      <!-- Project 4 -->
+      <div class="project-box">
+        <a href="https://codewitheshayoutube.github.io/FinalPortfolioEsha.github.io/" target="_blank">
+          <i class="fas fa-portrait"></i>
+          <p>Personal Portfolio</p>
+        </a>
       </div>
   
-      <!-- Video 5 -->
-      <div class="video-item">
-        <video controls>
-          <source src=".\Portfolio-Website-main\assets\images\projects\Dubai Real Estate.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p>Dubai RealEstate DSX website</p>
+      <!-- Project 5 -->
+      <div class="project-box">
+        <a href="https://gutint.com/" target="_blank">
+          <i class="fas fa-building"></i>
+          <p>A Company Website</p>
+        </a>
       </div>
   
-      <!-- Video 6 -->
-      <div class="video-item">
-        <video controls>
-          <source src=".\Portfolio-Website-main\assets\images\projects\apna.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p>Doctor Website for Psychologist </p>
+      <!-- Project 6 -->
+      <div class="project-box">
+        <a href="https://etaleem.gov.pk/" target="_blank">
+          <i class="fas fa-graduation-cap"></i>
+          <p>E-Taleem Website</p>
+        </a>
       </div>
+  
+      <!-- Project 7 -->
+      <div class="project-box">
+        <a href="https://www.askzyro.com/" target="_blank">
+          <i class="fas fa-question-circle"></i>
+          <p>Ask Zyro Website</p>
+        </a>
+      </div>
+  
     </div>
   
-    <script>
-      // You can add any JavaScript functionality here if needed
-    </script>
-  
+    <!-- Add Font Awesome icons (you can replace this link with your own CDN for Font Awesome) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
   </body>
   </html>
+  
+    
   
 
 </section>
