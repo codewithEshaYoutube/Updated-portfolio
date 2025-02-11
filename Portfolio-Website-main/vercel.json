@@ -1,0 +1,9 @@
+{
+    "source": "/feedback/((?!general).*)",
+    "destination": "/api/feedback/general"
+ }
+  {
+    "scripts": {
+      "build": "[my-framework] build --output public"
+    }
+  }
